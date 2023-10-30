@@ -1,0 +1,31 @@
+.star-animation {
+  color: #ecd979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 auto;
+}
+.star-animation__icon use {
+  width: 100%;
+  height: 100%;
+}
+
+.star-icon {
+  fill: #ecd979;
+  display: inline-block;
+  stroke: currentColor;
+  animation: 3s linear running infinite rotation;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
