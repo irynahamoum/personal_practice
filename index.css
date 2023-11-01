@@ -190,10 +190,50 @@ body {
   margin-right: 32px;
 }
 
+.timer__circle {
+  position: relative;
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  margin-bottom: 15px;
+}
+
 .timer__num {
-  font-size: 58px;
+  font-size: 44px;
   line-height: 1em;
 }
 
 .timer__name {
+}
+
+.circle {
+  --offset: -10px;
+  position: absolute;
+  top: var(--offset);
+  right: var(--offset);
+  bottom: var(--offset);
+  left: var(--offset);
+  transform: rotate(-90deg);
+}
+.segment {
+  fill: transparent;
+  stroke: url(#gradient);
+  stroke-width: 2px;
+  stroke-dasharray: 45 60;
+  stroke-linecap: round;
+  transform: scale(4.7);
+  transform-origin: center;
+  transition: stroke-dasharray 1s linear;
+}
+
+.gradient_1 {
+  stop-color: rgb(166, 244, 63);
+}
+
+.gradient_2 {
+  stop-color: rgb(242, 148, 86);
+}
+
+.gradient_3 {
+  stop-color: rgb(150, 2, 51);
 }
