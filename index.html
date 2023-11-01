@@ -4,13 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <a class="star-animation"
-      ><svg class="star-icon" width="52" height="51">
-        <use href="./icons.svg#star"></use>
-      </svg>
-    </a>
+    <div>
+      <a class="star-animation"
+        ><svg class="star-icon" width="52" height="51">
+          <use href="./icons.svg#star"></use>
+        </svg>
+      </a>
+    </div>
+    <div>
+      <button type="submit" class="order-button">
+        send<svg width="27" height="10" class="button-icon">
+          <use href="./icons.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="timer-wrap">
+      <div class="timer">
+        <div class="timer__title">
+          Place an order within next 8 hours and get a garantied 10% discount!
+        </div>
+        <div class="timer__box">
+          <div class="timer__item">
+            <div class="timer__num">0</div>
+            <div class="timer__name">days</div>
+          </div>
+          <div class="timer__item">
+            <div class="timer__num">8</div>
+            <div class="timer__name">hours</div>
+          </div>
+          <div class="timer__item">
+            <div class="timer__num">10</div>
+            <div class="timer__name">minutes</div>
+          </div>
+          <div class="timer__item">
+            <div class="timer__num">0.5</div>
+            <div class="timer__name">seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

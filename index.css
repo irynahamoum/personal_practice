@@ -1,14 +1,34 @@
-.star-animation {
-  color: #ecd979;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  margin: 0 auto;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap");
+
+:root {
+  --gradient: linear-gradient(
+    to right bottom,
+    rgb(238, 149, 217),
+    rgb(235, 253, 142),
+    rgb(255, 255, 255),
+    rgb(228, 245, 141),
+    rgb(189, 102, 213),
+    rgb(82, 6, 139)
+  );
 }
-.star-animation__icon use {
-  width: 100%;
-  height: 100%;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(
+    to right bottom,
+    rgb(14, 2, 57),
+    rgb(13, 37, 143)
+  );
+  color: rgb(14, 2, 57);
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 .star-icon {
@@ -28,4 +48,152 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.star-animation {
+  color: #ecd979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0 auto 32px;
+}
+.star-animation__icon use {
+  width: 100%;
+  height: 100%;
+}
+
+.order-button {
+  display: flex;
+  min-width: 145px;
+  height: 49px;
+  padding: 14px 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(252, 249, 249, 0.1);
+  background-color: transparent;
+  margin: 0 auto;
+  color: currentColor;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #ecd979;
+  margin-bottom: 32px;
+}
+
+.button-icon {
+  transform: rotate(-30deg);
+  fill: #ecd979;
+}
+
+.order-button:hover,
+.order-button:focus {
+  border: 1px solid #ecd979;
+}
+
+.order-button:hover .button-icon {
+  animation: 3s linear running rotation-trick;
+}
+
+@keyframes rotation-trick {
+  0% {
+    transform: rotate(330deg);
+  }
+
+  33% {
+    transform: rotate(220deg);
+  }
+
+  66% {
+    transform: rotate(110deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(30px);
+  }
+}
+
+/* .order-picture-bottom img {
+    
+    margin-bottom: 79px;
+  } */
+
+/* .ornament-wrap {
+    position: relative;
+  }
+
+  .ornament-wrap::after {
+    width: 100%;
+    height: 484px;
+    position: absolute;
+    content: '';
+    background-image: url(../img/tablet/Order/order-elements-tab1x.png);
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+  } */
+
+/* desctop */
+
+/* .ornament-wrap::after {
+    max-height: 640px;
+    background-image: url(../img/desktop/Order/order-elements-desk1x.png);
+    background-position: top 156px right 300px;
+    background-size: auto;
+    padding-bottom: 119px;
+    left: -64px;
+    bottom: 0;
+  } */
+
+.timer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  background: var(--gradient);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.timer__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.timer__box {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.timer__item {
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid rgb(14, 2, 57, 0.5);
+}
+
+.timer__item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.timer__num {
+  font-size: 58px;
+  line-height: 1em;
+}
+
+.timer__name {
 }
