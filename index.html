@@ -23,19 +23,11 @@
     </div>
     <div class="timer-wrap">
       <div class="timer">
-        <div class="timer__title">
-          Place an order within next 8 hours and get a garantied 10% discount!
-        </div>
+        <h3 class="timer__title">
+          Place an order within next 24 hours and get a garantied 10% discount!
+        </h3>
         <div class="timer__box">
-          <div class="timer__item">
-            <div class="timer__num">0</div>
-            <div class="timer__name">days</div>
-          </div>
-          <div class="timer__item">
-            <div class="timer__num">8</div>
-            <div class="timer__name">hours</div>
-          </div>
-          <div class="timer__item">
+          <div id="days" class="timer__item">
             <div class="timer__circle">
               <svg class="circle" viewbox="0 0 100 100">
                 <linearGradient
@@ -51,13 +43,69 @@
                 </linearGradient>
                 <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
               </svg>
+              <div class="timer__num">0</div>
             </div>
-            <div class="timer__num">10</div>
-            <div class="timer__name">minutes</div>
+            <p class="timer__name">days</p>
           </div>
-          <div class="timer__item">
-            <div class="timer__num">0.5</div>
-            <div class="timer__name">seconds</div>
+          <div id="hours" class="timer__item">
+            <div class="timer__circle">
+              <svg class="circle" viewbox="0 0 100 100">
+                <linearGradient
+                  id="gradient"
+                  x1="100%"
+                  y1="100%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  <stop class="gradient_1" offset="0%"></stop>
+                  <stop class="gradient_2" offset="70%"></stop>
+                  <stop class="gradient_3" offset="100%"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer__num">24</div>
+            </div>
+            <p class="timer__name">hours</p>
+          </div>
+          <div id="minutes" class="timer__item">
+            <div class="timer__circle">
+              <svg class="circle" viewbox="0 0 100 100">
+                <linearGradient
+                  id="gradient"
+                  x1="100%"
+                  y1="100%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  <stop class="gradient_1" offset="0%"></stop>
+                  <stop class="gradient_2" offset="70%"></stop>
+                  <stop class="gradient_3" offset="100%"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer__num">0</div>
+            </div>
+            <p class="timer__name">minutes</p>
+          </div>
+          <div id="secounds" class="timer__item">
+            <div class="timer__circle">
+              <svg class="circle" viewbox="0 0 100 100">
+                <linearGradient
+                  id="gradient"
+                  x1="100%"
+                  y1="100%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  <stop class="gradient_1" offset="0%"></stop>
+                  <stop class="gradient_2" offset="70%"></stop>
+                  <stop class="gradient_3" offset="100%"></stop>
+                </linearGradient>
+                <circle class="segment" r="9.55%" cx="50%" cy="50%"></circle>
+              </svg>
+              <div class="timer__num">0</div>
+            </div>
+            <p class="timer__name">secounds</p>
           </div>
         </div>
       </div>

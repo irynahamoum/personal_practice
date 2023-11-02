@@ -10,6 +10,9 @@
     rgb(189, 102, 213),
     rgb(82, 6, 139)
   );
+  --gradient_1: rgb(166, 244, 63);
+  --gradient_2: rgb(242, 148, 86);
+  --gradient_3: rgb(150, 2, 51);
 }
 
 * {
@@ -183,7 +186,6 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 16px;
-  border: 1px solid rgb(14, 2, 57, 0.5);
 }
 
 .timer__item:not(:last-child) {
@@ -195,15 +197,28 @@ body {
   --size: 70px;
   width: var(--size);
   height: var(--size);
+  margin: 15px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
 }
 
 .timer__num {
   font-size: 44px;
   line-height: 1em;
+  /* background: linear-gradient(
+    -125deg var(--gradient_1),
+    var(--gradient_2),
+    var(--gradient_3)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 .timer__name {
+  margin: 0;
 }
 
 .circle {
@@ -227,13 +242,13 @@ body {
 }
 
 .gradient_1 {
-  stop-color: rgb(166, 244, 63);
+  stop-color: var(--gradient_1);
 }
 
 .gradient_2 {
-  stop-color: rgb(242, 148, 86);
+  stop-color: var(--gradient_2);
 }
 
 .gradient_3 {
-  stop-color: rgb(150, 2, 51);
+  stop-color: var(--gradient_3);
 }
