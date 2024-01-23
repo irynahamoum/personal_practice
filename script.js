@@ -1,3 +1,11 @@
+// button.addEventListener("mousemove", (e) => {
+//   const rect = button.getBoundingclientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
+//   button.style.setProperty("--mouseX", `${x}px`);
+//   button.style.setProperty("--mouseY", `${y}px`);
+// });
+
 const dom = {
   days: document.getElementById("days"),
   hours: document.getElementById("hours"),
@@ -5,12 +13,20 @@ const dom = {
   seconds: document.getElementById("seconds"),
 };
 
-const addTime = 1000 * 60 * 60 * 24 * 1;
-const finishedTime = Date.now() + addTime;
+const getTime = () => {
+  const lsTime = localStorage.getItem("time");
+  if (lsTime) {
+    return lsTime;
+  }
+  const addTime = 1000 * 60 * 60 * 24 * 1;
+  const finishedTime = Date.now() + addTime;
+  localStorage.setItem("time", finishedTime);
+  return finishedTime;
+};
 
 setInterval(() => {
   const timeNow = Date.now();
-  const timer = finishedTime - timeNow;
+  const timer = getTime() - timeNow;
   const formattedTime = getFormattedTime(timer);
   renderTime(formattedTime, dom);
 }, 1000);
@@ -28,6 +44,8 @@ function getFormattedTime(time) {
 
 function renderTime(timeData, dom) {
   Object.keys(timeData).forEach((key) => {
-    dom[key].guerySelector(".timer__num").innerHTML = timeData;
+    if (!dom[key]) return;
+    dom[key].querySelector(".timer__num").innerHTML = timeData[key];
+    console.log({ key, dom: dom[key] });
   });
 }
